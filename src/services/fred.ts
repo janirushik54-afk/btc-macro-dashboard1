@@ -13,6 +13,10 @@ export async function getFredLatest(seriesId: string) {
   }
 
   const data = await res.json();
+
+  console.log("API_KEY:", API_KEY);
+  console.log("Response:", data);
+
   const observations = data.observations || [];
   const latest = observations[observations.length - 1];
 
