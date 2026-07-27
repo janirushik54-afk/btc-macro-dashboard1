@@ -15,7 +15,7 @@ function MacroCard({ title, series }: Props) {
         const result = await getFredLatest(series);
         setValue(result);
       } catch (e)  {cansole.error(e);
-      setValue(staring(e));
+      setValue(string(e));
    }
     }
 
