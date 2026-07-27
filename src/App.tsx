@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import MacroCard from "./components/MacroCard";
 
 function App() {
   return (
@@ -7,10 +6,25 @@ function App() {
       <Header />
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <MacroCard title="DXY" series="DTWEXBGS" />
-        <MacroCard title="Fed Rate" series="FEDFUNDS" />
-        <MacroCard title="CPI" series="CPIAUCSL" />
-        <MacroCard title="M2 Money Supply" series="M2SL" />
+        <div className="bg-gray-800 rounded-xl p-4">
+          <h2 className="text-gray-400 text-sm">Bitcoin Price</h2>
+          <p className="text-2xl font-bold">$--</p>
+        </div>
+
+        <div className="bg-gray-800 rounded-xl p-4">
+          <h2 className="text-gray-400 text-sm">Fear & Greed</h2>
+          <p className="text-2xl font-bold">--</p>
+        </div>
+
+        <div className="bg-gray-800 rounded-xl p-4">
+          <h2 className="text-gray-400 text-sm">DXY</h2>
+          <p className="text-2xl font-bold">--</p>
+        </div>
+
+        <div className="bg-gray-800 rounded-xl p-4">
+          <h2 className="text-gray-400 text-sm">Fed Rate</h2>
+          <p className="text-2xl font-bold">--</p>
+        </div>
       </div>
     </div>
   );
