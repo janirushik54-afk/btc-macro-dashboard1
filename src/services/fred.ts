@@ -1,21 +1,11 @@
-const API_KEY = import.meta.env.VITE_FRED_API_KEY;
-
 export async function getFredLatest(seriesId: string) {
-  const url =
-    `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}` +
-    `&api_key=${API_KEY}` +
-    `&file_type=json`;
-
-  const res = await fetch(url);
+  const res = await fetch(`/api/fred?series=${seriesId}`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch FRED data");
   }
 
   const data = await res.json();
-
-  console.log("API_KEY:", API_KEY);
-  console.log("Response:", data);
 
   const observations = data.observations || [];
   const latest = observations[observations.length - 1];
