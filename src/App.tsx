@@ -22,10 +22,10 @@ function App() {
         setFear(fearRes.data.data[0].value);
 
         const dxyRes = await axios.get("/api/fred?series=DTWEXBGS");
-        setDxy(dxyRes.data.value);
+setDxy(dxyRes.data.observations[dxyRes.data.observations.length - 1].value);
 
         const fedRes = await axios.get("/api/fred?series=FEDFUNDS");
-        setFed(fedRes.data.value);
+setFed(fedRes.data.observations[fedRes.data.observations.length - 1].value);
       } catch (e) {
         console.log(e);
       }
