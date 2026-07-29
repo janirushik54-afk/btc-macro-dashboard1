@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const apiKey = process.env.VITE_FRED_API_KEY;
+  const apiKey = process.env.FRED_API_KEY;
 
   const series = req.query.series;
 
